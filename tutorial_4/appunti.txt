@@ -1,0 +1,144 @@
+scoring patents
+
+don't want to take into account patents filed too recently.
+for the indicators, only select patents in a time frame where patents have time to do 'what they need to do'
+
+3. we collect the applicants of the patents.
+remember to do entity linking of the applicants name.
+
+3.2 how many firms to score? each sector is different and dynamic is different.
+look at minimum number of families  i want to consider.
+if a company has 3 patents and another has 1000, it's not reliable.
+so the very first step is to delete companies with little patent portfolio.
+her suggestion is: choose how many you want, but definetly keep out companies with few patents filed.
+
+4. how to compute volume of a firm?
+
+its' a share over all families.
+but the most interesting thing is 4.2 the evolution of these shares over time
+
+i.e. nestle is the biggest, but in the plot we see something interesting in 2012... basically a famous patent of nestle expired, this allowed toher companies to enter the market with new products using the technology of the patent without paying and without litigation risks.
+
+how did she find this out? she plot, she saw, she looked on internet and found the fact. you might need to do the same.
+
+nestle lost 5& market value, this kind of market share plot you can use for the project.
+
+
+then
+
+5. technological impact
+
+when a patent is very good, it gets cited a lot == future knowledge.
+so it is the number of forward citation a patent obtains.
+
+2 main things to take into account:
+
+cannot compare fields, some fields naturally have more patents like biology.
+cannot compare between years.
+
+what to do?
+
+normalize
+
+in this case she just divided by the mean
+
+
+BACK TO 4, she forgot something
+we count citations not only in tls212 but also in tls228.
+
+ok, back to 5
+we need a plot like in 5.1
+how better each company is wrt the avg
+i.e. kfreesystem is 27% better than the avg
+
+5.2 different fields have different citation patterns
+we can look at citation window very short for tech that has short tech cycle
+instead if we were in a long cycle tech, use longer window.
+
+5.3 not all forward citations are the same
+must differentiate applicants citations and examiner ones.
+
+so we make a similar plot as before
+i.e. 45% of patents ??? 
+
+5.4 blocking 'power' of patents. 
+'X' means that my patent lacks novelty and inventive step, BUT from cited patent pov, it means that the old existing patent is very good ad 'blocking'. this is very good for a company with patent portfolio since one of the goals of the company is to prevent other companies to enter this field. == having such patent that provokes many 'X's in new patents, it means that the company is in a very good spot.
+
+so for our work, check this. it's a huge signal, very meaningful data.
+
+I.E. in the plots we can see that caffitaly system is a tiny company but has a lot of patents that block. 
+
+6 PATENT ACCEPTANCE AS QUALITY PROXY
+2 ways:
+- basic way, check acceptance only at EPO (or just one office)
+
+- analyze acceptance of patent family over multiple offices 
+
+i.e. patent family filed in eu, usa and china. if accepted in eu, doesn't say that is also going to be accepted elsewhere. probable, but not 100%.
+
+so calculate share of acceptance within the family!! 
+
+for instance, why some companies get good acceptance rate in one office? cause they have good lawyers to make filings for that office.
+
+but if you notice that a company always patents in one office, then you don't need to check the family of course.
+
+
+7. MARKET
+metric family size counts how many offices i have filed my patent.
+it is an economic metric since you need to pay for each filing.
+
+but say that a patent has only use in EU, so count is 1 but actually good... how to add more info about this?
+when i file in epo, i still need to pay at every single office included in the epo. epc is comodo to file just once, but i need still to pay some fees to every country.
+instead in the us you pay only once and it's valid in every state of course.
+
+7.2 plot is interesting
+
+where can we find this info? tls231 tells you if a certain country has been validates (payed to make patent valid) or not.
+
+7.3 share of patents filed in the 4 major office
+
+--- we covered all the metrics ---
+
+--- next step: ranking ---
+
+8. now we can either rank them or make the previous indicators comparable
+
+blablabla
+
+what else could we do? combine the indicators.
+
+like, how do we combine the rankings?
+
+she uses RRF
+
+
+aspetta, cosi è troppo caotico.
+
+semplicemente combina gli score e dagli un peso diverso
+
+what we need to do for our project:
+which dimensions are ore important for my sector? when we seelct the weights, we need to justify them
+finally a score or a final rank
+
+finally, is the ranking stable? give proof that our ranking is stable to changes. meaning that if a tiny detail changes the ranking, it's not good. the ranking must be robust
+
+
+QUESTIONS:
+which changes should the ranking be resistant to? 
+answer: it depends from your sector, you must consider.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
