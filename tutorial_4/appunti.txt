@@ -128,8 +128,10 @@ which changes should the ranking be resistant to?
 answer: it depends from your sector, you must consider.
 
 
-
-
+FOR OUR PROJECT
+here we did how to compute present score
+in the last part find a way to do something else, predict future score  
+we have freedom here, use any way to forecast future
 
 
 
